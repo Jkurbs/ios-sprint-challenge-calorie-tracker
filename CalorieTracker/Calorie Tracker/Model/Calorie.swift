@@ -10,6 +10,15 @@ import Foundation
 
 struct Calorie {
     
-    let value: Float
-    let date: Date
+    let value: Double
+    let date: String
+    
+    init(value: Double) {
+        self.value = value
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+        let formattedDate = dateFormatter.string(from: Date())
+        self.date = formattedDate
+    }
 }
