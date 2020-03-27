@@ -1,19 +1,18 @@
 //
-//  Calorie.swift
+//  Calorie+Convenience.swift
 //  Calorie Tracker
 //
 //  Created by Kerby Jean on 3/27/20.
 //  Copyright © 2020 Kerby Jean. All rights reserved.
 //
 
+import CoreData
 import Foundation
 
-struct Calorie {
+extension Calorie {
     
-    let value: Double
-    let date: String
-    
-    init(value: Double) {
+    @discardableResult convenience init(value: Double, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+        self.init(context: context)
         self.value = value
         
         let dateFormatter = DateFormatter()

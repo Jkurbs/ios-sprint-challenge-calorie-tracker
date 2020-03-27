@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import CoreData
 import SwiftChart
 
 class GraphViewController: UIViewController {
     
-    var tableView: UITableView!
+    var tableView = UITableView(frame: CGRect.zero, style: .grouped)
     
-    var calories = [Calorie]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    lazy var fetchedResultsController: NSFetchedResultsController<Calorie> = {
+        let fetchRequest: NSFetchRequest<Calorie> = Calorie.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        let context = CoreDataStack.shared.mainContext
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        frc.delegate = self
+        try? frc.performFetch()
+        return frc
+    }()
+    
+    var graphView = GraphView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +37,27 @@ class GraphViewController: UIViewController {
         self.view.backgroundColor = .white
         self.title = "Calorie Tracker"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCalorie))
-        
-        tableView = UITableView(frame: view.frame, style: .grouped)
-        tableView.register(GraphCell.self, forCellReuseIdentifier: GraphCell.id)
+
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
+        view.addSubview(graphView)
+        
+        NSLayoutConstraint.activate([
+        
+            graphView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            graphView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            graphView.heightAnchor.constraint(equalToConstant: view.frame.height/3),
+            
+            tableView.topAnchor.constraint(equalTo: graphView.bottomAnchor),
+            tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            tableView.heightAnchor.constraint(equalTo: view.heightAnchor)
+        ])
+        
+        updateGraph()
     }
     
     @objc func addCalorie() {
@@ -49,47 +69,76 @@ class GraphViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in  })
         alert.addAction(UIAlertAction(title: "Add", style: .default) { action in
             if let textFields = alert.textFields, let textField = textFields.first, let result = textField.text, let value = Double(result) {
-                let calorie = Calorie(value: value)
-                self.calories.append(calorie)
-                NotificationCenter.default.post(name: .graphValue, object: nil, userInfo: ["calories": self.calories])
+                Calorie(value: value)
+                do {
+                    try? CoreDataStack.shared.save()
+                }
+                self.updateGraph()
             }
         })
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func updateGraph() {
+        if let calories = self.fetchedResultsController.fetchedObjects {
+            NotificationCenter.default.post(name: .graphValue, object: nil, userInfo: ["calories": calories])
+        }
     }
 }
 
 extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return calories.count
-        }
+        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: GraphCell.id, for: indexPath) as? GraphCell else { fatalError() }
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { fatalError() }
-            let calorie = calories[indexPath.row]
-            cell.textLabel?.text = "Calories \(calorie.value) \(calorie.date)"
-            return cell
-        }
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { fatalError() }
+        let calorie = fetchedResultsController.object(at: indexPath)
+        cell.textLabel?.text = "Calories \(calorie.value) \(calorie.date ?? "")"
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return view.frame.height/3
-        }
-        
         return 60.0
+    }
+}
+
+extension GraphViewController: NSFetchedResultsControllerDelegate {
+    
+    func controllerWillChangeContent(_ controller:
+        NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            guard let newIndexPath = newIndexPath else { return }
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .update:
+            guard let indexPath = indexPath else { return }
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        case .move:
+            guard let oldIndexPath = indexPath,
+                let newIndexPath = newIndexPath else { return }
+            tableView.deleteRows(at: [oldIndexPath], with: .automatic)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        case .delete:
+            guard let indexPath = indexPath else { return }
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        @unknown default:
+            break
+        }
     }
 }
 

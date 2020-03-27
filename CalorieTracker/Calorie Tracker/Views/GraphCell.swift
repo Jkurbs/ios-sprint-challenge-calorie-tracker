@@ -9,19 +9,11 @@
 import UIKit
 import SwiftChart
 
-class GraphCell: UITableViewCell {
-    
-    var chart: Chart!
-    
-    static var id: String {
-        return String(describing: self)
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+class GraphView: Chart {
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupViews()
-        
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,25 +21,17 @@ class GraphCell: UITableViewCell {
     }
     
     private func setupViews() {
-        
-        chart = Chart(frame: CGRect.zero)
-        contentView.addSubview(chart)
-        
-        chart.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            chart.heightAnchor.constraint(equalTo: contentView.heightAnchor),
-            chart.widthAnchor.constraint(equalTo: contentView.widthAnchor)
-        ])
-        
+        self.translatesAutoresizingMaskIntoConstraints = false
         NotificationCenter.default.addObserver(self, selector: #selector(updateView(_:)), name: .graphValue, object: nil)
     }
     
     @objc private func updateView(_ notification: Notification) {
         guard let userInfo =  notification.userInfo, let calories = userInfo["calories"] as? [Calorie] else { return }
         let values = calories.compactMap { $0.value }
+        removeAllSeries()
         let series = ChartSeries(values)
         series.color = ChartColors.greenColor()
         series.area = true
-        chart.add(series)
+        add(series)
     }
 }
