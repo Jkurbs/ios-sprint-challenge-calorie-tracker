@@ -12,8 +12,8 @@ import SwiftChart
 
 class GraphViewController: UIViewController {
     
-    var tableView = UITableView(frame: CGRect.zero, style: .grouped)
-    
+    // MARK: - Properties
+        
     lazy var fetchedResultsController: NSFetchedResultsController<Calorie> = {
         let fetchRequest: NSFetchRequest<Calorie> = Calorie.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
@@ -24,7 +24,10 @@ class GraphViewController: UIViewController {
         return frc
     }()
     
+    var tableView = UITableView(frame: CGRect.zero, style: .grouped)
     var graphView = GraphView()
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,6 +89,8 @@ class GraphViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDelegate/UITableViewDataSource
+
 extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -108,6 +113,8 @@ extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
         return 60.0
     }
 }
+
+// MARK: - NSFetchedResultsControllerDelegate
 
 extension GraphViewController: NSFetchedResultsControllerDelegate {
     
