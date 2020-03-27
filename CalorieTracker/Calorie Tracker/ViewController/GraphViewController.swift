@@ -41,6 +41,7 @@ class GraphViewController: UIViewController {
         self.view.backgroundColor = .white
         self.title = "Calorie Tracker"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCalorie))
+        navigationController?.navigationBar.tintColor = .systemGreen
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: .calorieCellId)
         tableView.allowsSelection = false
@@ -69,9 +70,18 @@ class GraphViewController: UIViewController {
     }
     
     @objc func addCalorie() {
-        let alert = SCLAlertView()
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false,
+            showCircularIcon: false,
+            shouldAutoDismiss: true,
+            contentViewColor: UIColor(white: 0.8, alpha: 1.0),
+            titleColor: .darkGray
+        )
+        let alert = SCLAlertView(appearance: appearance)
+        alert.iconTintColor = view.tintColor
         let textField = alert.addTextField("Enter your name")
-        alert.addButton("Add") {
+        textField.tintColor = .systemGreen
+        alert.addButton("Add",  backgroundColor: .systemGreen) {
             if let result = textField.text, let value = Double(result)  {
                 Calorie(value: value)
                 do {
@@ -79,6 +89,9 @@ class GraphViewController: UIViewController {
                 }
                 self.updateGraph()
             }
+        }
+        alert.addButton("Cancel",  backgroundColor: .systemGray) {
+            alert.dismiss(animated: true, completion: nil)
         }
         alert.showTitle("Add Calorie", subTitle: "", style: .edit)
     }
