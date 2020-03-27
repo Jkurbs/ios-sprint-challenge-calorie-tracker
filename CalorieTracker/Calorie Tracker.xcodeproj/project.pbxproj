@@ -10,7 +10,7 @@
 		346272D0E0C465439F3632AD /* Pods_Calorie_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBF53360BCEAFD3EB9C67BC /* Pods_Calorie_Tracker.framework */; };
 		6D278175242E4DF3004CE4C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D278174242E4DF3004CE4C0 /* AppDelegate.swift */; };
 		6D278177242E4DF3004CE4C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D278176242E4DF3004CE4C0 /* SceneDelegate.swift */; };
-		6D278179242E4DF3004CE4C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D278178242E4DF3004CE4C0 /* ViewController.swift */; };
+		6D278179242E4DF3004CE4C0 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D278178242E4DF3004CE4C0 /* GraphViewController.swift */; };
 		6D27817C242E4DF3004CE4C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D27817A242E4DF3004CE4C0 /* Main.storyboard */; };
 		6D27817E242E4DF8004CE4C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D27817D242E4DF8004CE4C0 /* Assets.xcassets */; };
 		6D278181242E4DF8004CE4C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D27817F242E4DF8004CE4C0 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		6D278171242E4DF3004CE4C0 /* Calorie Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calorie Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D278174242E4DF3004CE4C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D278176242E4DF3004CE4C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6D278178242E4DF3004CE4C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D278178242E4DF3004CE4C0 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		6D27817B242E4DF3004CE4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D27817D242E4DF8004CE4C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D278180242E4DF8004CE4C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,12 +69,12 @@
 		6D278173242E4DF3004CE4C0 /* Calorie Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				6D278192242E5FC4004CE4C0 /* ViewController */,
 				6D27818E242E5E0F004CE4C0 /* Extension */,
 				6D27818B242E5408004CE4C0 /* Views */,
 				6D278188242E5116004CE4C0 /* Model */,
 				6D278174242E4DF3004CE4C0 /* AppDelegate.swift */,
 				6D278176242E4DF3004CE4C0 /* SceneDelegate.swift */,
-				6D278178242E4DF3004CE4C0 /* ViewController.swift */,
 				6D27817A242E4DF3004CE4C0 /* Main.storyboard */,
 				6D27817D242E4DF8004CE4C0 /* Assets.xcassets */,
 				6D27817F242E4DF8004CE4C0 /* LaunchScreen.storyboard */,
@@ -105,6 +105,14 @@
 				6D27818F242E5E22004CE4C0 /* NSNotification+String.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		6D278192242E5FC4004CE4C0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D278178242E4DF3004CE4C0 /* GraphViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		BD7C87104E03D03521354DEE /* Frameworks */ = {
@@ -239,7 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D278179242E4DF3004CE4C0 /* ViewController.swift in Sources */,
+				6D278179242E4DF3004CE4C0 /* GraphViewController.swift in Sources */,
 				6D278175242E4DF3004CE4C0 /* AppDelegate.swift in Sources */,
 				6D278177242E4DF3004CE4C0 /* SceneDelegate.swift in Sources */,
 				6D27818D242E5423004CE4C0 /* GraphCell.swift in Sources */,

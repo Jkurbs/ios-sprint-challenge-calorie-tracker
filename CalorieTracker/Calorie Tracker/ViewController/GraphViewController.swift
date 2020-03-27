@@ -9,7 +9,7 @@
 import UIKit
 import SwiftChart
 
-class ViewController: UIViewController {
+class GraphViewController: UIViewController {
     
     var tableView: UITableView!
     
