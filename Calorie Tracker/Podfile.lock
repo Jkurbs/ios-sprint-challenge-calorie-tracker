@@ -1,0 +1,22 @@
+PODS:
+  - SwiftChart (1.0.1)
+
+DEPENDENCIES:
+  - SwiftChart (from `https://github.com/gpbl/SwiftChart`, branch `master`)
+
+EXTERNAL SOURCES:
+  SwiftChart:
+    :branch: master
+    :git: https://github.com/gpbl/SwiftChart
+
+CHECKOUT OPTIONS:
+  SwiftChart:
+    :commit: 4949a94090641ca85b8133129f7a7b2230694788
+    :git: https://github.com/gpbl/SwiftChart
+
+SPEC CHECKSUMS:
+  SwiftChart: 6ed8c61f3731cc32e3cb92858dba339d08ddac87
+
+PODFILE CHECKSUM: 803c72e9c4d55a470f0ca299f6926d4b67d62dc1
+
+COCOAPODS: 1.8.4
