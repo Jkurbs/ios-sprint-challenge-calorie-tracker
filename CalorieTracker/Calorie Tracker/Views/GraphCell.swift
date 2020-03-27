@@ -26,7 +26,7 @@ class GraphView: Chart {
     }
     
     @objc private func updateView(_ notification: Notification) {
-        guard let userInfo =  notification.userInfo, let calories = userInfo["calories"] as? [Calorie] else { return }
+        guard let userInfo = notification.userInfo, let calories = userInfo["calories"] as? [Calorie] else { return }
         let values = calories.compactMap { $0.value }
         removeAllSeries()
         let series = ChartSeries(values)

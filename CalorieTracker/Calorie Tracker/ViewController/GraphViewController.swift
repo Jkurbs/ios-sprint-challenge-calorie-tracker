@@ -59,7 +59,7 @@ class GraphViewController: UIViewController {
             
             graphView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             graphView.widthAnchor.constraint(equalTo: view.widthAnchor),
-            graphView.heightAnchor.constraint(equalToConstant: view.frame.height/3),
+            graphView.heightAnchor.constraint(equalToConstant: view.frame.height / 3),
             
             tableView.topAnchor.constraint(equalTo: graphView.bottomAnchor),
             tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -81,8 +81,8 @@ class GraphViewController: UIViewController {
         alert.iconTintColor = view.tintColor
         let textField = alert.addTextField("Enter your name")
         textField.tintColor = .systemGreen
-        alert.addButton("Add",  backgroundColor: .systemGreen) {
-            if let result = textField.text, let value = Double(result)  {
+        alert.addButton("Add", backgroundColor: .systemGreen) {
+            if let result = textField.text, let value = Double(result) {
                 Calorie(value: value)
                 do {
                     try? CoreDataStack.shared.save()
@@ -90,7 +90,7 @@ class GraphViewController: UIViewController {
                 self.updateGraph()
             }
         }
-        alert.addButton("Cancel",  backgroundColor: .systemGray) {
+        alert.addButton("Cancel", backgroundColor: .systemGray) {
             alert.dismiss(animated: true, completion: nil)
         }
         alert.showTitle("Add Calorie", subTitle: "", style: .edit)
@@ -108,11 +108,11 @@ class GraphViewController: UIViewController {
 extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchedResultsController.sections?[section].numberOfObjects ?? 0
+        fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -123,7 +123,7 @@ extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        60.0
     }
 }
 
@@ -131,8 +131,7 @@ extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension GraphViewController: NSFetchedResultsControllerDelegate {
     
-    func controllerWillChangeContent(_ controller:
-        NSFetchedResultsController<NSFetchRequestResult>) {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
     
@@ -161,4 +160,3 @@ extension GraphViewController: NSFetchedResultsControllerDelegate {
         }
     }
 }
-

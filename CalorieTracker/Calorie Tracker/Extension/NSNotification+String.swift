@@ -13,5 +13,5 @@ extension NSNotification.Name {
 }
 
 extension String {
-    static let calorieCellId = "calorieCellId" 
+    static let calorieCellId = "calorieCellId"
 }
