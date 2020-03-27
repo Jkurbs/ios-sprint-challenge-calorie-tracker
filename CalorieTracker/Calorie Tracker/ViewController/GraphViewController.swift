@@ -13,7 +13,7 @@ import SwiftChart
 class GraphViewController: UIViewController {
     
     // MARK: - Properties
-        
+    
     lazy var fetchedResultsController: NSFetchedResultsController<Calorie> = {
         let fetchRequest: NSFetchRequest<Calorie> = Calorie.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
@@ -40,17 +40,19 @@ class GraphViewController: UIViewController {
         self.view.backgroundColor = .white
         self.title = "Calorie Tracker"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCalorie))
-
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: .calorieCellId)
+        tableView.allowsSelection = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
         tableView.translatesAutoresizingMaskIntoConstraints = false
+    
         view.addSubview(tableView)
         view.addSubview(graphView)
         
         NSLayoutConstraint.activate([
-        
+            
             graphView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             graphView.widthAnchor.constraint(equalTo: view.widthAnchor),
             graphView.heightAnchor.constraint(equalToConstant: view.frame.height/3),
@@ -102,10 +104,9 @@ extension GraphViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: .calorieCellId) else { fatalError() }
         let calorie = fetchedResultsController.object(at: indexPath)
-        cell.textLabel?.text = "Calories \(calorie.value) \(calorie.date ?? "")"
+        cell.textLabel?.text = "Calories: \(calorie.value) \(calorie.date ?? "")"
         return cell
     }
     

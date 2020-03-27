@@ -11,3 +11,7 @@ import Foundation
 extension NSNotification.Name {
     static let graphValue = NSNotification.Name("graphValue")
 }
+
+extension String {
+    static let calorieCellId = "calorieCellId" 
+}
