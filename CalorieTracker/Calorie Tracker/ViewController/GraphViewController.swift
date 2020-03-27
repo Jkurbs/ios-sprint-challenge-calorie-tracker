@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import SwiftChart
+import SCLAlertView
 
 class GraphViewController: UIViewController {
     
@@ -43,11 +44,13 @@ class GraphViewController: UIViewController {
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: .calorieCellId)
         tableView.allowsSelection = false
+        tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
         tableView.translatesAutoresizingMaskIntoConstraints = false
-    
+        tableView.tableFooterView = UIView()
+        
         view.addSubview(tableView)
         view.addSubview(graphView)
         
@@ -66,22 +69,18 @@ class GraphViewController: UIViewController {
     }
     
     @objc func addCalorie() {
-        let alert = UIAlertController(title: "Add Calorie", message: nil, preferredStyle: .alert)
-        alert.addTextField() { newTextField in
-            newTextField.keyboardType = .numberPad
-            newTextField.placeholder = "Add calorie"
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { _ in  })
-        alert.addAction(UIAlertAction(title: "Add", style: .default) { action in
-            if let textFields = alert.textFields, let textField = textFields.first, let result = textField.text, let value = Double(result) {
+        let alert = SCLAlertView()
+        let textField = alert.addTextField("Enter your name")
+        alert.addButton("Add") {
+            if let result = textField.text, let value = Double(result)  {
                 Calorie(value: value)
                 do {
                     try? CoreDataStack.shared.save()
                 }
                 self.updateGraph()
             }
-        })
-        self.present(alert, animated: true, completion: nil)
+        }
+        alert.showTitle("Add Calorie", subTitle: "", style: .edit)
     }
     
     func updateGraph() {
