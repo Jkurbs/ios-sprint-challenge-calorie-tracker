@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		384133DC24EA1D8F005F90C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */; };
 		384445D624EA118B002C99CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D524EA118B002C99CB /* AppDelegate.swift */; };
 		384445D824EA118B002C99CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D724EA118B002C99CB /* SceneDelegate.swift */; };
 		384445DA24EA118B002C99CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D924EA118B002C99CB /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		384445D224EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-sprint-challenge-Calorie-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384445D524EA118B002C99CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		384445D724EA118B002C99CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384133DA24EA1D67005F90C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		384445C924EA118B002C99CB = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 		384445D424EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				384133DA24EA1D67005F90C9 /* Model */,
 				384445D524EA118B002C99CB /* AppDelegate.swift */,
 				384445D724EA118B002C99CB /* SceneDelegate.swift */,
 				384445D924EA118B002C99CB /* ViewController.swift */,
@@ -169,6 +180,7 @@
 				384445DA24EA118B002C99CB /* ViewController.swift in Sources */,
 				384445D624EA118B002C99CB /* AppDelegate.swift in Sources */,
 				384445D824EA118B002C99CB /* SceneDelegate.swift in Sources */,
+				384133DC24EA1D8F005F90C9 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
