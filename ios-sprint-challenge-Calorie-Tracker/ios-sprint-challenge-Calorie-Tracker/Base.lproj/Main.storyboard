@@ -41,6 +41,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calorie Tracker" id="3ZY-nq-7QU"/>
+                    <connections>
+                        <outlet property="chart" destination="5ti-Fb-ENY" id="HiV-99-mvU"/>
+                        <outlet property="tableView" destination="WJn-TF-4hf" id="dko-nj-JGQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
