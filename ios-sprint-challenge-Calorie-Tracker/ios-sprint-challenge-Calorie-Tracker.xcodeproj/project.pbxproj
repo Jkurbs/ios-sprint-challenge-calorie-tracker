@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		384133DC24EA1D8F005F90C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */; };
+		384133DE24EA1DF1005F90C9 /* CoreData+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384133DD24EA1DF1005F90C9 /* CoreData+Convenience.swift */; };
+		384133E124EA1E68005F90C9 /* Calorie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 384133DF24EA1E68005F90C9 /* Calorie.xcdatamodeld */; };
+		384133E524EA2366005F90C9 /* NSNotification+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384133E424EA2366005F90C9 /* NSNotification+String.swift */; };
+		384445D624EA118B002C99CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D524EA118B002C99CB /* AppDelegate.swift */; };
+		384445D824EA118B002C99CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D724EA118B002C99CB /* SceneDelegate.swift */; };
+		384445DA24EA118B002C99CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D924EA118B002C99CB /* ViewController.swift */; };
+		384445DD24EA118B002C99CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384445DB24EA118B002C99CB /* Main.storyboard */; };
+		384445DF24EA118C002C99CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384445DE24EA118C002C99CB /* Assets.xcassets */; };
+		384445E224EA118C002C99CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384445E024EA118C002C99CB /* LaunchScreen.storyboard */; };
+		384445F024EA1551002C99CB /* SwiftChart.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 384445E924EA1550002C99CB /* SwiftChart.podspec */; };
+		384445F124EA1551002C99CB /* Example in Resources */ = {isa = PBXBuildFile; fileRef = 384445EA24EA1550002C99CB /* Example */; };
+		384445F224EA1551002C99CB /* ISSUE_TEMPLATE.md in Resources */ = {isa = PBXBuildFile; fileRef = 384445EB24EA1550002C99CB /* ISSUE_TEMPLATE.md */; };
+		384445F324EA1551002C99CB /* Source in Resources */ = {isa = PBXBuildFile; fileRef = 384445EC24EA1551002C99CB /* Source */; };
+		384445F424EA1551002C99CB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384445ED24EA1551002C99CB /* LICENSE.txt */; };
+		384445F524EA1551002C99CB /* README copy.md in Resources */ = {isa = PBXBuildFile; fileRef = 384445EE24EA1551002C99CB /* README copy.md */; };
+		384445F624EA1551002C99CB /* CODE_OF_CONDUCT.md in Resources */ = {isa = PBXBuildFile; fileRef = 384445EF24EA1551002C99CB /* CODE_OF_CONDUCT.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		384133DD24EA1DF1005F90C9 /* CoreData+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Convenience.swift"; sourceTree = "<group>"; };
+		384133E024EA1E68005F90C9 /* Calorie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calorie.xcdatamodel; sourceTree = "<group>"; };
+		384133E424EA2366005F90C9 /* NSNotification+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotification+String.swift"; sourceTree = "<group>"; };
+		384445D224EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-sprint-challenge-Calorie-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		384445D524EA118B002C99CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		384445D724EA118B002C99CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		384445D924EA118B002C99CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		384445DC24EA118B002C99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		384445DE24EA118C002C99CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		384445E124EA118C002C99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		384445E324EA118C002C99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		384445E924EA1550002C99CB /* SwiftChart.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftChart.podspec; path = ../../SwiftChart.podspec; sourceTree = "<group>"; };
+		384445EA24EA1550002C99CB /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Example; path = ../../Example; sourceTree = "<group>"; };
+		384445EB24EA1550002C99CB /* ISSUE_TEMPLATE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = ISSUE_TEMPLATE.md; path = ../../ISSUE_TEMPLATE.md; sourceTree = "<group>"; };
+		384445EC24EA1551002C99CB /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = ../../Source; sourceTree = "<group>"; };
+		384445ED24EA1551002C99CB /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../../LICENSE.txt; sourceTree = "<group>"; };
+		384445EE24EA1551002C99CB /* README copy.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README copy.md"; path = "../../README copy.md"; sourceTree = "<group>"; };
+		384445EF24EA1551002C99CB /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		384445CF24EA118B002C99CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		384133DA24EA1D67005F90C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				384133E324EA2347005F90C9 /* Extension */,
+				384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */,
+				384133DD24EA1DF1005F90C9 /* CoreData+Convenience.swift */,
+				384133DF24EA1E68005F90C9 /* Calorie.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		384133E224EA2322005F90C9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				384445D924EA118B002C99CB /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		384133E324EA2347005F90C9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				384133E424EA2366005F90C9 /* NSNotification+String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		384445C924EA118B002C99CB = {
+			isa = PBXGroup;
+			children = (
+				384445D424EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker */,
+				384445D324EA118B002C99CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		384445D324EA118B002C99CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				384445D224EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		384445D424EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				384133DA24EA1D67005F90C9 /* Model */,
+				384445D524EA118B002C99CB /* AppDelegate.swift */,
+				384445D724EA118B002C99CB /* SceneDelegate.swift */,
+				384133E224EA2322005F90C9 /* ViewController */,
+				384445DB24EA118B002C99CB /* Main.storyboard */,
+				384445EF24EA1551002C99CB /* CODE_OF_CONDUCT.md */,
+				384445EA24EA1550002C99CB /* Example */,
+				384445EB24EA1550002C99CB /* ISSUE_TEMPLATE.md */,
+				384445ED24EA1551002C99CB /* LICENSE.txt */,
+				384445EE24EA1551002C99CB /* README copy.md */,
+				384445EC24EA1551002C99CB /* Source */,
+				384445E924EA1550002C99CB /* SwiftChart.podspec */,
+				384445DE24EA118C002C99CB /* Assets.xcassets */,
+				384445E024EA118C002C99CB /* LaunchScreen.storyboard */,
+				384445E324EA118C002C99CB /* Info.plist */,
+			);
+			path = "ios-sprint-challenge-Calorie-Tracker";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		384445D124EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 384445E624EA118C002C99CB /* Build configuration list for PBXNativeTarget "ios-sprint-challenge-Calorie-Tracker" */;
+			buildPhases = (
+				384445CE24EA118B002C99CB /* Sources */,
+				384445CF24EA118B002C99CB /* Frameworks */,
+				384445D024EA118B002C99CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-sprint-challenge-Calorie-Tracker";
+			productName = "ios-sprint-challenge-Calorie-Tracker";
+			productReference = 384445D224EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		384445CA24EA118B002C99CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "david williams";
+				TargetAttributes = {
+					384445D124EA118B002C99CB = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 384445CD24EA118B002C99CB /* Build configuration list for PBXProject "ios-sprint-challenge-Calorie-Tracker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 384445C924EA118B002C99CB;
+			productRefGroup = 384445D324EA118B002C99CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				384445D124EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		384445D024EA118B002C99CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384445F324EA1551002C99CB /* Source in Resources */,
+				384445F124EA1551002C99CB /* Example in Resources */,
+				384445E224EA118C002C99CB /* LaunchScreen.storyboard in Resources */,
+				384445F624EA1551002C99CB /* CODE_OF_CONDUCT.md in Resources */,
+				384445F224EA1551002C99CB /* ISSUE_TEMPLATE.md in Resources */,
+				384445F424EA1551002C99CB /* LICENSE.txt in Resources */,
+				384445F024EA1551002C99CB /* SwiftChart.podspec in Resources */,
+				384445F524EA1551002C99CB /* README copy.md in Resources */,
+				384445DF24EA118C002C99CB /* Assets.xcassets in Resources */,
+				384445DD24EA118B002C99CB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		384445CE24EA118B002C99CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				384445DA24EA118B002C99CB /* ViewController.swift in Sources */,
+				384133E524EA2366005F90C9 /* NSNotification+String.swift in Sources */,
+				384133E124EA1E68005F90C9 /* Calorie.xcdatamodeld in Sources */,
+				384445D624EA118B002C99CB /* AppDelegate.swift in Sources */,
+				384133DE24EA1DF1005F90C9 /* CoreData+Convenience.swift in Sources */,
+				384445D824EA118B002C99CB /* SceneDelegate.swift in Sources */,
+				384133DC24EA1D8F005F90C9 /* CoreDataStack.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		384445DB24EA118B002C99CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				384445DC24EA118B002C99CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		384445E024EA118C002C99CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				384445E124EA118C002C99CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		384445E424EA118C002C99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		384445E524EA118C002C99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		384445E724EA118C002C99CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88FS6F8B93;
+				INFOPLIST_FILE = "ios-sprint-challenge-Calorie-Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidWilliams.ios-sprint-challenge-Calorie-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		384445E824EA118C002C99CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 88FS6F8B93;
+				INFOPLIST_FILE = "ios-sprint-challenge-Calorie-Tracker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.davidWilliams.ios-sprint-challenge-Calorie-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		384445CD24EA118B002C99CB /* Build configuration list for PBXProject "ios-sprint-challenge-Calorie-Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384445E424EA118C002C99CB /* Debug */,
+				384445E524EA118C002C99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		384445E624EA118C002C99CB /* Build configuration list for PBXNativeTarget "ios-sprint-challenge-Calorie-Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				384445E724EA118C002C99CB /* Debug */,
+				384445E824EA118C002C99CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		384133DF24EA1E68005F90C9 /* Calorie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				384133E024EA1E68005F90C9 /* Calorie.xcdatamodel */,
+			);
+			currentVersion = 384133E024EA1E68005F90C9 /* Calorie.xcdatamodel */;
+			path = Calorie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 384445CA24EA118B002C99CB /* Project object */;
+}
