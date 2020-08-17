@@ -13,6 +13,13 @@
 		384445DD24EA118B002C99CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384445DB24EA118B002C99CB /* Main.storyboard */; };
 		384445DF24EA118C002C99CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 384445DE24EA118C002C99CB /* Assets.xcassets */; };
 		384445E224EA118C002C99CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 384445E024EA118C002C99CB /* LaunchScreen.storyboard */; };
+		384445F024EA1551002C99CB /* SwiftChart.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 384445E924EA1550002C99CB /* SwiftChart.podspec */; };
+		384445F124EA1551002C99CB /* Example in Resources */ = {isa = PBXBuildFile; fileRef = 384445EA24EA1550002C99CB /* Example */; };
+		384445F224EA1551002C99CB /* ISSUE_TEMPLATE.md in Resources */ = {isa = PBXBuildFile; fileRef = 384445EB24EA1550002C99CB /* ISSUE_TEMPLATE.md */; };
+		384445F324EA1551002C99CB /* Source in Resources */ = {isa = PBXBuildFile; fileRef = 384445EC24EA1551002C99CB /* Source */; };
+		384445F424EA1551002C99CB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384445ED24EA1551002C99CB /* LICENSE.txt */; };
+		384445F524EA1551002C99CB /* README copy.md in Resources */ = {isa = PBXBuildFile; fileRef = 384445EE24EA1551002C99CB /* README copy.md */; };
+		384445F624EA1551002C99CB /* CODE_OF_CONDUCT.md in Resources */ = {isa = PBXBuildFile; fileRef = 384445EF24EA1551002C99CB /* CODE_OF_CONDUCT.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		384445DE24EA118C002C99CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		384445E124EA118C002C99CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		384445E324EA118C002C99CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		384445E924EA1550002C99CB /* SwiftChart.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftChart.podspec; path = ../../SwiftChart.podspec; sourceTree = "<group>"; };
+		384445EA24EA1550002C99CB /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Example; path = ../../Example; sourceTree = "<group>"; };
+		384445EB24EA1550002C99CB /* ISSUE_TEMPLATE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = ISSUE_TEMPLATE.md; path = ../../ISSUE_TEMPLATE.md; sourceTree = "<group>"; };
+		384445EC24EA1551002C99CB /* Source */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Source; path = ../../Source; sourceTree = "<group>"; };
+		384445ED24EA1551002C99CB /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../../LICENSE.txt; sourceTree = "<group>"; };
+		384445EE24EA1551002C99CB /* README copy.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = "README copy.md"; path = "../../README copy.md"; sourceTree = "<group>"; };
+		384445EF24EA1551002C99CB /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CODE_OF_CONDUCT.md; path = ../../CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,13 @@
 				384445D724EA118B002C99CB /* SceneDelegate.swift */,
 				384445D924EA118B002C99CB /* ViewController.swift */,
 				384445DB24EA118B002C99CB /* Main.storyboard */,
+				384445EF24EA1551002C99CB /* CODE_OF_CONDUCT.md */,
+				384445EA24EA1550002C99CB /* Example */,
+				384445EB24EA1550002C99CB /* ISSUE_TEMPLATE.md */,
+				384445ED24EA1551002C99CB /* LICENSE.txt */,
+				384445EE24EA1551002C99CB /* README copy.md */,
+				384445EC24EA1551002C99CB /* Source */,
+				384445E924EA1550002C99CB /* SwiftChart.podspec */,
 				384445DE24EA118C002C99CB /* Assets.xcassets */,
 				384445E024EA118C002C99CB /* LaunchScreen.storyboard */,
 				384445E324EA118C002C99CB /* Info.plist */,
@@ -125,7 +146,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				384445F324EA1551002C99CB /* Source in Resources */,
+				384445F124EA1551002C99CB /* Example in Resources */,
 				384445E224EA118C002C99CB /* LaunchScreen.storyboard in Resources */,
+				384445F624EA1551002C99CB /* CODE_OF_CONDUCT.md in Resources */,
+				384445F224EA1551002C99CB /* ISSUE_TEMPLATE.md in Resources */,
+				384445F424EA1551002C99CB /* LICENSE.txt in Resources */,
+				384445F024EA1551002C99CB /* SwiftChart.podspec in Resources */,
+				384445F524EA1551002C99CB /* README copy.md in Resources */,
 				384445DF24EA118C002C99CB /* Assets.xcassets in Resources */,
 				384445DD24EA118B002C99CB /* Main.storyboard in Resources */,
 			);
