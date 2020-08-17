@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		384133DC24EA1D8F005F90C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */; };
+		384133DE24EA1DF1005F90C9 /* CoreData+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384133DD24EA1DF1005F90C9 /* CoreData+Convenience.swift */; };
+		384133E124EA1E68005F90C9 /* Calorie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 384133DF24EA1E68005F90C9 /* Calorie.xcdatamodeld */; };
 		384445D624EA118B002C99CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D524EA118B002C99CB /* AppDelegate.swift */; };
 		384445D824EA118B002C99CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D724EA118B002C99CB /* SceneDelegate.swift */; };
 		384445DA24EA118B002C99CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384445D924EA118B002C99CB /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		384133DD24EA1DF1005F90C9 /* CoreData+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData+Convenience.swift"; sourceTree = "<group>"; };
+		384133E024EA1E68005F90C9 /* Calorie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calorie.xcdatamodel; sourceTree = "<group>"; };
 		384445D224EA118B002C99CB /* ios-sprint-challenge-Calorie-Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-sprint-challenge-Calorie-Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		384445D524EA118B002C99CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		384445D724EA118B002C99CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				384133DB24EA1D8F005F90C9 /* CoreDataStack.swift */,
+				384133DD24EA1DF1005F90C9 /* CoreData+Convenience.swift */,
+				384133DF24EA1E68005F90C9 /* Calorie.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				384445DA24EA118B002C99CB /* ViewController.swift in Sources */,
+				384133E124EA1E68005F90C9 /* Calorie.xcdatamodeld in Sources */,
 				384445D624EA118B002C99CB /* AppDelegate.swift in Sources */,
+				384133DE24EA1DF1005F90C9 /* CoreData+Convenience.swift in Sources */,
 				384445D824EA118B002C99CB /* SceneDelegate.swift in Sources */,
 				384133DC24EA1D8F005F90C9 /* CoreDataStack.swift in Sources */,
 			);
@@ -378,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		384133DF24EA1E68005F90C9 /* Calorie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				384133E024EA1E68005F90C9 /* Calorie.xcdatamodel */,
+			);
+			currentVersion = 384133E024EA1E68005F90C9 /* Calorie.xcdatamodel */;
+			path = Calorie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 384445CA24EA118B002C99CB /* Project object */;
 }
